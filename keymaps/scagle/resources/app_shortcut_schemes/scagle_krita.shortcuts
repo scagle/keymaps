@@ -1,0 +1,22 @@
+[Shortcuts]
+KritaShape/KisToolLine=V
+LayerGroupSwitcher/next=Ctrl+Shift+PgUp
+LayerGroupSwitcher/previous=Ctrl+Shift+PgDown
+ToolReferenceImages=Ctrl+Shift+V
+activateNextLayer=PgUp;\s
+activateNextSiblingLayer=Shift+PgUp
+activatePreviousSiblingLayer=Shift+PgDown
+create_quick_clipping_group=none
+decrease_brush_size=[; }
+decrease_opacity=I; Shift+O
+disable_pressure=W
+erase_action=E; Shift+B
+fullscreen=Ctrl+Shift+F; Shift+F
+make_brush_color_lighter=L; Shift+K
+quick_ungroup=Ctrl+Shift+G
+show_brush_editor=F5; Ctrl+Alt+!
+show_brush_presets=F6; Ctrl+Alt+@
+show_color_history=H; Ctrl+Alt+#
+show_color_selector=Shift+I; Ctrl+Alt+$
+show_tool_options=\\; Ctrl+Alt+^
+toggle_layer_visibility=~

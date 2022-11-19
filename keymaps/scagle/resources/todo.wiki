@@ -1,0 +1,16 @@
+= Problems =
+1. Add "safe reset" tap dance
+2. Figure out a better way besides layers to automate symbols, and extra commands. Layers just feels so clunky when I'm trying to type fast.
+    - I feel like I'm over-hyping layers to some extent, and relying too much on them. They have some legitimate disadvantages
+        - IE: complications with modifier keys
+        - IE: difficult to remember
+        - IE: "blending" layers is obfuscated and hard to pull off well.
+        - IE: at least 200-500ms of pause between switching layers (human error), which is annoying when typing symbols.
+            - [high-depth/low-breadth], except if you're doing tasks with bucketed/grouped inputs
+            - In other-words: Can do infinite key combinations theoretically, but it requires exponentially higher effort/planning to keep throughput high
+            - I need a better system for *multiplexing* quickly between all characters, symbols, digits, function keys, and "extras" (PGUP/PGDOWN/INSERT/DELETE)
+                - Preferably high-flexibility, high-throughput, but willing to sacrifice on flexibility.
+    - Maybe a leader key would alleviate some of this
+
+= Solution Attempts =
+    - @#2 Attempting to add TG instead of MO, in a more accessable spot for ART layers, where thumbs can be utilized more
