@@ -16,7 +16,7 @@ $(KEYBOARDS):
 	ln -sf $(shell pwd)/keyboards/$@ qmk_firmware/keyboards/$(PATH_$@)/keymaps/$(USER)
 
 	# run lint check
-	cd qmk_firmware; qmk lint -km $(USER) -kb $(NAME_$@) --strict
+	cd qmk_firmware; qmk lint -km $(USER) -kb $(NAME_$@) #--strict
 	
 	# run build
 	make BUILD_DIR=$(shell pwd)/build -j1 -C qmk_firmware $(NAME_$@):$(USER)
