@@ -23,13 +23,8 @@
 
 #if defined(RGBLIGHT_ENABLE)
 
-    #undef  RGBLIGHT_ANIMATIONS
-//  #define RGBLIGHT_ANIMATIONS  // consumes ~10% memory. Use cautiously, or define just the ones you want.
-
 //  #undef  RGBLIGHT_SLEEP       
     #define RGBLIGHT_SLEEP       // ~84 bytes, ~0.28%
-
-//  #define SCAGLE_RGBLIGHT_ANIMATIONS
 
 #endif  // defined(RGBLIGHT_ENABLE)
 
