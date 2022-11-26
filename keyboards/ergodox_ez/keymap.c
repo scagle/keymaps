@@ -370,7 +370,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
         //  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢻⣿⣿⣿⣿⣿⠿⠿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣈⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀
         //  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⡿⠛⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
         //  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠻⠿⠿⠟⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-        case KC_A ... KC_Z:
+        case KC_A ... KC_Z:  // Hijack keys to follow alternating upper case pattern if toggled
 
             if (alt_case_toggle && record->event.pressed) {
                 if (alt_case_shift) {
@@ -383,7 +383,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
             }
             return true;
 
-        case ALTCASE:
+        case ALTCASE:  // Toggle Spongebob Mock
 
             if (record->event.pressed) {
                 if (alt_case_toggle) {
