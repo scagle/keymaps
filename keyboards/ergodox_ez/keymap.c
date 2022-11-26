@@ -23,6 +23,8 @@
 #include "feature/key_functions/combo.h"
 #include "feature/background_functions/sleep.h"
 
+#define KEYCODE_USED false
+#define KEYCODE_UNUSED true
 // }}}
 
 // Keyboard Layer Mappings {{{
@@ -82,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
         TO(HUB),        XXXXXXXXXXXXXX, XXXXXXXXXXXXXX, XXXXXXXXXXXXXX, XXXXXXXXXXXXXX,
 
         // Thumb cluster
-                        MO(NUMPAD),     XXXXXXXXXXXXXX,
+                        MO(NUMPAD),     TD(TD_SPONGE_MOCK),
                                         KC_LCMD,
         KC_SPACE,       KC_LSHIFT,      TRI_LEFT,
 
@@ -292,7 +294,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
                 SEND_STRING(QMK_KEYBOARD "/" QMK_KEYMAP " @ " KEYMAP_BRANCH " " KEYMAP_DATE " Features: [" ENABLED_FEATURES "]");
             }
 
-            return false;
+            return KEYCODE_USED;
 
         case CKC_DOCS:  // Output URL to this file in github for easy viewing of keyboard layout (SINCE I FORGET ALL THE TIME!)
 
@@ -301,7 +303,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
                 SEND_STRING("https://tinyurl.com/22ukfj94");
             }
 
-            return false;
+            return KEYCODE_USED;
 
         case TRI_LEFT:
 
@@ -315,7 +317,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
             }
             update_tri_layer(SYMBOLS, NUMPAD, UI);
 
-            return false;
+            return KEYCODE_USED;
 
         case TRI_RIGHT:
 
@@ -329,10 +331,14 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
             }
             update_tri_layer(SYMBOLS, NUMPAD, UI);
 
-            return false;
+            return KEYCODE_USED;
 
     }
-    return true;
+
+    if (apply_sponge_mock(keycode) == KEYCODE_USED)
+        return KEYCODE_USED;
+
+    return KEYCODE_UNUSED;  // handle it as raw input character instead of custom character
 }
 
 layer_state_t layer_state_set_user(layer_state_t state)
