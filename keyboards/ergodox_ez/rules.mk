@@ -19,7 +19,7 @@ BOOTMAGIC_ENABLE = no             # [?]
 
 LTO_ENABLE = yes                  # [--]  Link Time Optimization by GCC
 COMMAND_ENABLE = no               # [++]  Allow "Magic" TMK commands
-CONSOLE_ENABLE = no               # [+++] Allow dumping to console (with "sudo hdi_listen")
+CONSOLE_ENABLE = no               # [+++] Allow dumping to console (with "sudo hid_listen")
 
 # }}} Features
 

@@ -38,6 +38,7 @@ enum mapped_key_codes {
 enum custom_key_codes {
     CKC_SHOW_VERSION = EZ_SAFE_RANGE,   // Type out version/compilation info
     CKC_DOCS,                           // Type out URL to keymaps.c file for easy reference
+    ALTCASE,                            // ToGgLe SpOnGeBoB mOcK tExT oUtPuT
 };
 
 // Alias enums for layers
