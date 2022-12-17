@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
         // Thumb cluster
         RESET,          ______________,
         ______________,
-        TRI_RIGHT,      KC_ENTER,       KC_BSPACE
+        TRI_RIGHT,      MO(EXTRA),      KC_BSPACE
 
         //}}}
 
@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
         TO(HUB),        XXXXXXXXXXXXXX, XXXXXXXXXXXXXX, XXXXXXXXXXXXXX, XXXXXXXXXXXXXX,
 
         // Thumb cluster
-                        MO(NUMPAD),     ALTCASE,
+                        OSL(EXTRA),     ALTCASE,
                                         KC_LCMD,
         KC_SPACE,       KC_LSHIFT,      TRI_LEFT,
 
@@ -104,7 +104,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
         // Thumb cluster
         XXXXXXXXXXXXXX, XXXXXXXXXXXXXX,
         KC_RCMD,
-        TRI_RIGHT,      KC_ENTER,       KC_BSPACE
+        TRI_RIGHT,      MO(EXTRA),      KC_BSPACE
 
         //}}}
 
@@ -120,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
 
         ______________, ______________, ______________, ______________, ______________, ______________, ______________,
         ______________, KC_PLUS,        KC_PIPE,        KC_LABK,        KC_SLSH,        KC_GRV,         ______________,
-        MO(EXTRA),      KC_MINS,        KC_LCBR,        KC_LBRC,        KC_LPRN,        KC_TILD,
+        ______________, KC_MINS,        KC_LCBR,        KC_LBRC,        KC_LPRN,        KC_TILD,
         MO(NUMPAD),     KC_EXLM,        KC_AT,          KC_DQUO,        KC_DLR,         KC_PERC,        ______________,
         TO(HUB),        ______________, ______________, ______________, ______________,
 
@@ -157,26 +157,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
     [NUMPAD] = LAYOUT_ergodox(
 
         // Left Hand {{{
-        ______________, KC_NUMLOCK,     KC_KP_SLASH,    KC_KP_ASTERISK, KC_KP_MINUS,    ______________, ______________,
-        ______________, KC_KP_7,        KC_KP_8,        KC_KP_9,        KC_KP_PLUS,     ______________, ______________,
-        ______________, KC_KP_4,        KC_KP_5,        KC_KP_6,        KC_KP_ENTER,    ______________,
-        ___CRITICAL___, KC_KP_1,        KC_KP_2,        KC_KP_3,        KC_KP_0,        ______________, ______________,
-        ______________, XXXXXXXXXXXXXX, XXXXXXXXXXXXXX, XXXXXXXXXXXXXX, XXXXXXXXXXXXXX,
+        ______________, KC_NUMLOCK,     KC_KP_SLASH,    KC_KP_ASTERISK, KC_KP_MINUS,    KC_INSERT,      ______________,
+        ______________, KC_KP_7,        KC_KP_8,        KC_KP_9,        KC_KP_PLUS,     KC_DELETE,      KC_PGUP,
+        ______________, KC_KP_4,        KC_KP_5,        KC_KP_6,        KC_KP_ENTER,    KC_HOME,
+        ___CRITICAL___, KC_KP_1,        KC_KP_2,        KC_KP_3,        KC_KP_0,        KC_END,         KC_PGDOWN,
+        TO(HUB),        XXXXXXXXXXXXXX, KC_EQUAL,       KC_KP_DOT,      XXXXXXXXXXXXXX,
 
         // Thumb cluster
-                        ___CRITICAL___, ______________,
+                        ______________, ______________,
                                         ______________,
-        ______________, MO(EXTRA),      TRI_LEFT,
+        ______________, ______________, ___CRITICAL___,
 
         //}}}
 
         // Right Hand {{{
 
-        KC_INSERT,      KC_NUMLOCK,     KC_KP_SLASH,    KC_KP_ASTERISK, KC_KP_MINUS,    KC_INSERT,      KC_HOME,
-        KC_PGUP,        KC_KP_7,        KC_KP_8,        KC_KP_9,        KC_KP_PLUS,     KC_DELETE,      KC_END,
-                        KC_KP_4,        KC_KP_5,        KC_KP_6,        KC_EQUAL,       KC_PGDOWN,      KC_PGUP,
-        KC_PGDOWN,      KC_KP_1,        KC_KP_2,        KC_KP_3,        KC_KP_ENTER,    XXXXXXXXXXXXXX, XXXXXXXXXXXXXX,
-                                        KC_KP_0,        KC_KP_DOT,      XXXXXXXXXXXXXX, XXXXXXXXXXXXXX, XXXXXXXXXXXXXX,
+        XXXXXXXXXXXXXX, KC_NUMLOCK,     KC_KP_SLASH,    KC_KP_ASTERISK, KC_KP_MINUS,    KC_INSERT,      XXXXXXXXXXXXXX,
+        KC_PGUP,        KC_KP_7,        KC_KP_8,        KC_KP_9,        KC_KP_PLUS,     KC_DELETE,      XXXXXXXXXXXXXX,
+                        KC_KP_4,        KC_KP_5,        KC_KP_6,        KC_KP_ENTER,    KC_HOME,        XXXXXXXXXXXXXX,
+        KC_PGDOWN,      KC_KP_1,        KC_KP_2,        KC_KP_3,        KC_KP_0,        KC_END,         ______________,
+                                        KC_EQUAL,       KC_KP_DOT,      XXXXXXXXXXXXXX, XXXXXXXXXXXXXX, XXXXXXXXXXXXXX,
 
         // Thumb cluster
         ______________, ______________,
@@ -200,14 +200,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
 
         ______________, KC_F1,          KC_F2,          KC_F3,          KC_F4,          KC_F5,          KC_F6,
         ______________, KC_F13,         KC_F14,         KC_F15,         KC_F16,         ______________, ______________,
-        ___CRITICAL___, KC_F17,         KC_F18,         KC_F19,         KC_F20,         ______________,
+        ______________, KC_F17,         KC_F18,         KC_F19,         KC_F20,         ______________,
         ______________, KC_F21,         KC_F22,         KC_F23,         KC_F24,         ______________, ______________,
         TO(HUB),        ______________, ______________, ______________, ______________,
 
         // Thumb cluster
                         ______________, ______________,
                                         ______________,
-        ______________, ___CRITICAL___, ______________,
+        ______________, ______________, ______________,
 
         //}}}
 
